@@ -1,13 +1,13 @@
 import './App.css';
 import Collection from './components/Collection';
 import Home from './components/Home';
-import Navbar from './components/Navbar';
+import MyNavbar from './components/Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container-fluid p-0">
       <header className="App-header">
-        <Navbar />
+        <MyNavbar />
         <Home />
         <Collection />
       </header>
