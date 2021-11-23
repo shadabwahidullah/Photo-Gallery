@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <div className="col-12 row m-0 mt-5">
       <HomeBanner />
-      <Search/>
+      <Search />
       {collections.Collections.map(
         (collection) => (
           <Collection key={collection.id} collectionInfo={collection}>

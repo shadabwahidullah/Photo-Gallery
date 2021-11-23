@@ -1,9 +1,10 @@
 import React from 'react';
-import { FaSearch } from 'react-icons/fa';
 
 const Search = () => (
-  <div>
-    <FaSearch />
+  <div className="row">
+    <form>
+      <input className="form-control m-2" placeholder="Search for images" />
+    </form>
   </div>
 );
 
