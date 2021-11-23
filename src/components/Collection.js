@@ -13,7 +13,7 @@ const Collection = (props) => {
     <div id={id} className="col-6 col-md-4 col-lg-3 col-xl-2 border border-white light-pink text-center collection-item d-flex flex-column justify-content-center">
       <h2>{title}</h2>
       <h4>
-        Total:
+        Media in total:
         {media}
       </h4>
       <h4>

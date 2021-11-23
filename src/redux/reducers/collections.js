@@ -3,7 +3,7 @@ import axios from 'axios';
 const FETCH_COLLECTIONS = 'photogallery/collections/FETCH_COLLECTIONS';
 
 const BASE_URL = 'https://api.pexels.com/v1/collections';
-const FEATURED_COLLECTIONS = `${BASE_URL}/featured?per_page=50`;
+const FEATURED_COLLECTIONS = `${BASE_URL}/featured?per_page=25`;
 const AUTHORIZATION_KEY = '563492ad6f91700001000001b58bde28d2164b54989eb54e4a8fbfbd';
 
 export const fetchCollections = () => (dispatch) => {
