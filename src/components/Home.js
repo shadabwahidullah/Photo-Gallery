@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Collection from './Collection';
 import { fetchCollections } from '../redux/reducers/collections';
 import HomeBanner from './HomeBanner';
+import Search from './Search';
 
 const Home = () => {
   const collections = useSelector((state) => state.collectionsReducer);
@@ -14,6 +15,7 @@ const Home = () => {
   return (
     <div className="col-12 row m-0 mt-5">
       <HomeBanner />
+      <Search/>
       {collections.Collections.map(
         (collection) => (
           <Collection key={collection.id} collectionInfo={collection}>
