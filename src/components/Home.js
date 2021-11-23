@@ -4,33 +4,18 @@ import Collection from './Collection';
 import { fetchCollections } from '../redux/reducers/collections';
 
 const Home = () => {
-  useSelector((state) => state.collectionsReducer);
+  const collections = useSelector((state) => state.collectionsReducer);
   const dispatch = useDispatch();
   useEffect(() => {
     console.log('something is happening');
-    fetchCollections();
-  });
+    dispatch(fetchCollections());
+  }, []);
   return (
     <div className="col-12 row m-0 mt-5">
-      <Collection />
-      <Collection />
-      <button
-        type="button"
-        onClick={() => {
-          dispatch(fetchCollections());
-        }}
-      >
-        click here
-      </button>
-      <Collection />
-      <Collection />
-      <Collection />
-      <Collection />
-      <Collection />
-      <Collection />
-      <Collection />
-      <Collection />
-      <Collection />
+      {collections.Collections.map((collection) => {
+        console.log('collection is ', collection);
+        return <Collection key={collection.id} collectionInfo={collection}>collection</Collection>;
+      })}
     </div>
   );
 };

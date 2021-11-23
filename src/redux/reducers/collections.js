@@ -19,12 +19,13 @@ export const fetchCollections = () => (dispatch) => {
     });
 };
 
-const initialState = { collections: [] };
+const initialState = { Collections: [] };
+
 const collectionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_COLLECTIONS:
       console.log('inside the switch', action.payload);
-      return { ...state, collections: action.payload };
+      return { ...state, Collections: action.payload };
     default:
       return state;
   }
