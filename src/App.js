@@ -1,3 +1,4 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
 import MyNavbar from './components/Navbar';
@@ -8,7 +9,9 @@ function App() {
       <header className="App-header">
         <MyNavbar />
       </header>
-      <Home />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }

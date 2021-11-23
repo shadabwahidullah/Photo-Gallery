@@ -12,10 +12,13 @@ const Home = () => {
   }, []);
   return (
     <div className="col-12 row m-0 mt-5">
-      {collections.Collections.map((collection) => {
-        console.log('collection is ', collection);
-        return <Collection key={collection.id} collectionInfo={collection}>collection</Collection>;
-      })}
+      {collections.Collections.map(
+        (collection) => (
+          <Collection key={collection.id} collectionInfo={collection}>
+            collection
+          </Collection>
+        ),
+      )}
     </div>
   );
 };
