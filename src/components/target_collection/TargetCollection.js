@@ -8,17 +8,22 @@ import Video from './media/Video';
 
 const TargetCollection = () => {
   const dispatch = useDispatch();
-  const collection = useSelector((state) => state.collectionReducer);
+  const reducers = useSelector((state) => state);
+  const { collectionsReducer, collectionReducer } = reducers;
+  const { Collections } = collectionsReducer;
   const params = useParams();
+  console.log('collection name is ', Collections, params.collectionId);
+  const collectionName = Collections.find((col) => col.id === params.collectionId).title;
+  console.log('target collection name is ', collectionName);
+  console.log('reducers. collectionReducer', collectionReducer.targetCollection);
   useEffect(() => {
     console.log('Use effect called from target collection');
-    console.log('target collection is', collection.targetCollection);
     dispatch(fetchCollection(params.collectionId));
   }, []);
   return (
     <div className="">
-      <Banner title={params.collectionId} />
-      {collection.targetCollection.map((media) => {
+      <Banner title={collectionName} />
+      {collectionReducer.targetCollection.map((media) => {
         if (media.type === 'Photo') {
           return <Photo />;
         } if (media.type === 'Video') {

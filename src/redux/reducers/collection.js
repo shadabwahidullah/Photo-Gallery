@@ -17,7 +17,7 @@ export const fetchCollection = (id) => (dispatch) => {
     });
 };
 
-const initialState = { targetCollection: {} };
+const initialState = { targetCollection: [] };
 
 const collectionReducer = (state = initialState, action) => {
   switch (action.type) {
