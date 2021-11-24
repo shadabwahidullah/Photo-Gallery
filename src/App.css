@@ -39,3 +39,7 @@
   border-color: rgb(250, 184, 247);
   box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0), 0 0 10px rgb(248, 134, 242);
 }
+
+a{
+  text-decoration: none;
+}

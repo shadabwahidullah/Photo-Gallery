@@ -20,7 +20,7 @@ const TargetCollection = () => {
     dispatch(fetchCollection(params.collectionId));
   }, []);
   return (
-    <div className="col-12 row m-0">
+    <div className="col-12 row m-0 mt-5">
       <Banner title={collectionName} />
       {collectionReducer.targetCollection.map((media) => {
         if (media.type === 'Photo') {
