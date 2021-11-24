@@ -1,5 +1,5 @@
 import React from 'react';
 
-const Photo = () => (<di>Photo</di>);
+const Photo = () => (<div>Photo</div>);
 
 export default Photo;
