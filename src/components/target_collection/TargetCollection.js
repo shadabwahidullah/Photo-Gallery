@@ -21,13 +21,13 @@ const TargetCollection = () => {
     dispatch(fetchCollection(params.collectionId));
   }, []);
   return (
-    <div className="">
+    <div className="col-12 row m-0">
       <Banner title={collectionName} />
       {collectionReducer.targetCollection.map((media) => {
         if (media.type === 'Photo') {
-          return <Photo />;
+          return <Photo photo={media} />;
         } if (media.type === 'Video') {
-          return <Video />;
+          return <Video video={media} />;
         }
         return null;
       })}
