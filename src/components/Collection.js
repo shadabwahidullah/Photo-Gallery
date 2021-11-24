@@ -29,7 +29,7 @@ const Collection = (props) => {
         type="button"
         onClick={(event) => {
           callFetchCollection(event);
-          navigate('/targetCollection');
+          navigate('/target');
         }}
       >
         {title}

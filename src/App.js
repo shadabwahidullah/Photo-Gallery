@@ -1,7 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
+import Home from './components/home/Home';
 import MyNavbar from './components/Navbar';
+import TargetCollection from './components/target_collection/TargetCollection';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/target" element={<TargetCollection />} />
       </Routes>
     </div>
   );

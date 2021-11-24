@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import Collection from './Collection';
-import { fetchCollections } from '../redux/reducers/collections';
-import HomeBanner from './HomeBanner';
+import Collection from '../Collection';
+import { fetchCollections } from '../../redux/reducers/collections';
+import HomeBanner from '../Banner';
 import Search from './Search';
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
   }, []);
   return (
     <div className="col-12 row m-0 mt-5">
-      <HomeBanner />
+      <HomeBanner title="Photo Collections Gallery" />
       <Search />
       {collections.Collections.map(
         (collection) => (
