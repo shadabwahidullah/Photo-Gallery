@@ -18,13 +18,18 @@ const Home = () => {
       <HomeBanner title="Photo Collections Gallery" />
       <Search />
       {collections.Collections.map(
-        (collection) => (
-          <Link key={collection.id} to={`/target/${collection.id}`} className="col-6 col-md-4 col-lg-3 col-xl-2 p-0">
-            <Collection key={collection.id} collectionInfo={collection}>
-              collection
-            </Collection>
-          </Link>
-        ),
+        (collection) => {
+          if (collection.photos_count !== 0) {
+            return (
+              <Link key={collection.id} to={`/target/${collection.id}`} className="col-6 col-md-4 col-lg-3 col-xl-2 p-0">
+                <Collection key={collection.id} collectionInfo={collection}>
+                  collection
+                </Collection>
+              </Link>
+            );
+          }
+          return null;
+        },
       )}
       <Outlet />
     </div>

@@ -5,9 +5,7 @@ const Collection = (props) => {
   const {
     id,
     title,
-    media_count: media,
     photos_count: photo,
-    videos_count: video,
   } = collectionInfo;
 
   return (
@@ -20,15 +18,8 @@ const Collection = (props) => {
       </h1>
       <span className="align-bottom">
         <p className="m-0">
-          Media in total:
-          {media}
-        </p>
-        <p className="m-0">
           Images:
           {photo}
-          {'  '}
-          Videos:
-          {video}
         </p>
       </span>
     </div>

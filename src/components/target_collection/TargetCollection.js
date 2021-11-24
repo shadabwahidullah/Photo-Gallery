@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import Banner from '../Banner';
 import { fetchCollection } from '../../redux/reducers/collection';
 import Photo from './media/Photo';
-import Video from './media/Video';
 
 const TargetCollection = () => {
   const dispatch = useDispatch();
@@ -26,8 +25,6 @@ const TargetCollection = () => {
       {collectionReducer.targetCollection.map((media) => {
         if (media.type === 'Photo') {
           return <Photo photo={media} />;
-        } if (media.type === 'Video') {
-          return <Video video={media} />;
         }
         return null;
       })}
