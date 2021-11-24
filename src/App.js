@@ -12,7 +12,9 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/target" element={<TargetCollection />} />
+        <Route path="/target" element={<TargetCollection />}>
+          <Route path=":collectionId" element={<TargetCollection />} />
+        </Route>
       </Routes>
     </div>
   );

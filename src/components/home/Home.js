@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link, Outlet } from 'react-router-dom';
 import Collection from '../Collection';
 import { fetchCollections } from '../../redux/reducers/collections';
 import HomeBanner from '../Banner';
@@ -18,11 +19,14 @@ const Home = () => {
       <Search />
       {collections.Collections.map(
         (collection) => (
-          <Collection key={collection.id} collectionInfo={collection}>
-            collection
-          </Collection>
+          <Link key={collection.id} to={`/target/${collection.id}`} className="col-6 col-md-4 col-lg-3 col-xl-2 p-0">
+            <Collection key={collection.id} collectionInfo={collection}>
+              collection
+            </Collection>
+          </Link>
         ),
       )}
+      <Outlet />
     </div>
   );
 };
