@@ -67,7 +67,9 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- We have used **SpaceX API** to get the information about Rockets and missions. I
+- Design by (Nelson Sakwa on Behance)[https://www.behance.net/sakwadesignstudio].
+
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
