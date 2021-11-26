@@ -8,7 +8,7 @@ const Photo = (props) => {
   const { portrait } = src;
 
   return (
-    <div className="col-6 p-0 pink border border-white border-3" id={id}>
+    <div className="col-6 col-md-4 col-lg-3 col-xl-2 p-0 pink border border-white border-3" id={id}>
       <img className="col-12" src={portrait} alt={photographer} />
       <h6 className="p-2 pb-0 fs-5">
         photo by:
