@@ -1,18 +1,17 @@
-import collectionReducer from "../redux/reducers/collection";
-import { FETCH_COLLECTION } from "../redux/reducers/collection";
+import collectionReducer, { FETCH_COLLECTION } from '../redux/reducers/collection';
 
-describe("Redux collection reducer tests", () => {
-  test("Collection reducer initial state test", () => {
+describe('Redux collection reducer tests', () => {
+  test('Collection reducer initial state test', () => {
     expect(collectionReducer(undefined, {})).toEqual({ targetCollection: [] });
   });
 
-  test("Collection reducer fetch test", () => {
+  test('Collection reducer fetch test', () => {
     const action = {
       type: FETCH_COLLECTION,
-      payload: [{id: 'test'}],
+      payload: [{ id: 'test' }],
     };
-    expect(collectionReducer({targetCollection:{}}, action)).toEqual({
-      targetCollection: [{id:'test'}],
+    expect(collectionReducer({ targetCollection: {} }, action)).toEqual({
+      targetCollection: [{ id: 'test' }],
     });
   });
 });
