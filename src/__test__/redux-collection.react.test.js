@@ -8,9 +8,11 @@ describe("Redux collection reducer tests", () => {
 
   test("Collection reducer fetch test", () => {
     const action = {
-        type: FETCH_COLLECTION,
-        payload: [{}],
-    }
-    expect(collectionReducer(undefined, action)).toEqual({ targetCollection: [{}] });
+      type: FETCH_COLLECTION,
+      payload: [{id: 'test'}],
+    };
+    expect(collectionReducer({targetCollection:{}}, action)).toEqual({
+      targetCollection: [{id:'test'}],
+    });
   });
 });

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const FETCH_COLLECTIONS = 'photogallery/collections/FETCH_COLLECTIONS';
-const FILTER_COLLECTIONS = 'photogallery/collections/FILTER_COLLECTIONS';
+export const FETCH_COLLECTIONS = 'photogallery/collections/FETCH_COLLECTIONS';
+export const FILTER_COLLECTIONS = 'photogallery/collections/FILTER_COLLECTIONS';
 
 const BASE_URL = 'https://api.pexels.com/v1/collections';
 const FEATURED_COLLECTIONS = `${BASE_URL}/featured?per_page=25`;
