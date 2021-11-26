@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components snapshot testing Banner testing 1`] = `[Function]`;
+
+exports[`Components snapshot testing Collection testing 1`] = `[Function]`;
+
+exports[`Components snapshot testing Home page testing 1`] = `[Function]`;
+
+exports[`Components snapshot testing Navbar testing 1`] = `[Function]`;
+
+exports[`Components snapshot testing Photo testing 1`] = `[Function]`;
+
+exports[`Components snapshot testing Search testing 1`] = `[Function]`;

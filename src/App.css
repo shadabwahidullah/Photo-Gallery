@@ -1,0 +1,46 @@
+.light-pink {
+  background-color: rgb(248, 134, 242);
+  color: white;
+}
+
+.collection-item {
+  min-height: 200px;
+}
+
+.collection-item:nth-child(2n),
+.pink {
+  background: rgb(233, 80, 212);
+  color: white;
+}
+
+.fa {
+  color: white;
+  cursor: pointer;
+}
+
+.home-banner {
+  background-image: url("./assets/images/HomeBanner.jpg");
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    ),
+    url("./assets/images/HomeBanner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.banner-title {
+  background-color: rgba(233, 80, 212, 0.73);
+}
+
+.form-control:focus {
+  border-color: rgb(250, 184, 247);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0), 0 0 10px rgb(248, 134, 242);
+}
+
+a {
+  text-decoration: none;
+}
