@@ -11,12 +11,9 @@ const TargetCollection = () => {
   const { collectionsReducer, collectionReducer } = reducers;
   const { Collections } = collectionsReducer;
   const params = useParams();
-  console.log('collection name is ', Collections, params.collectionId);
   const collectionName = Collections.find((col) => col.id === params.collectionId).title;
-  console.log('target collection name is ', collectionName);
-  console.log('reducers. collectionReducer', collectionReducer.targetCollection);
+
   useEffect(() => {
-    console.log('Use effect called from target collection');
     dispatch(fetchCollection(params.collectionId));
   }, []);
   return (

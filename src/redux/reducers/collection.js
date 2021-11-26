@@ -12,7 +12,6 @@ export const fetchCollection = (id) => (dispatch) => {
     })
     .then((response) => {
       const { media } = response.data;
-      console.log('response for media is ', media);
       dispatch({ type: FETCH_COLLECTION, payload: media });
     });
 };
@@ -22,7 +21,6 @@ const initialState = { targetCollection: [] };
 const collectionReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_COLLECTION:
-      console.log('the fetched collection media: ', action.payload);
       return { ...state, targetCollection: action.payload };
     default:
       return state;

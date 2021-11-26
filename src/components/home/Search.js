@@ -15,7 +15,6 @@ const Search = () => {
           className="form-control m-2"
           placeholder="Search for images"
           onChange={(event) => {
-            console.log('the typed in message is ', event.target.value);
             filter(event);
           }}
         />

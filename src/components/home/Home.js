@@ -10,7 +10,6 @@ const Home = () => {
   const collections = useSelector((state) => state.collectionsReducer);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log('something is happening');
     dispatch(fetchCollections());
   }, []);
   return (

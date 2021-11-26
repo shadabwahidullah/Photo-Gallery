@@ -1,7 +1,6 @@
 import React from 'react';
 
 const HomeBanner = (props) => {
-  console.log('home banner');
   const { title } = props;
   return (
     <div className="home-banner col-12 d-flex flex-column justify-content-center">
