@@ -1,4 +1,4 @@
-# Money Exchange
+# Photo gallery
 
 Photo gallery is a web app that is developed on react and provides the best free stock photos, royalty-free images & videos shared by creators.
 
